@@ -1,0 +1,224 @@
+.title {
+    color: white;
+    background-color: blue;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.text {
+    color: white;
+}
+
+.team {
+    color: white;
+    background-color: blue;
+    text-align: center;
+}
+
+.teamicon {
+    display: flex;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color:  linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+    background-color: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+    border-bottom: solid 6px #aac5de;
+    border-radius: 9px;
+}
+
+
+.zenhan {
+    display: flex;   
+}
+
+
+.ironman {
+    margin-left: 0%;
+    
+}
+
+.cap {
+    margin-left: 0%;
+}
+
+.form {
+    background-color: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%) ;
+    color: white;
+   
+}
+
+
+.comment {
+    color:white;
+}
+
+.kouhan {
+    display: flex;
+}
+
+.pc { display: block !important; }
+.sp { display: none !important; }
+
+
+
+.GATE {
+    margin-left: 0%;
+    width: 5%;
+}
+
+
+
+.container {
+	width: 100%;
+	height: 32.6vw;
+    background-image: url(../Avengers/shuugou.jpg);
+    background-size:100% auto
+}
+
+
+@media only screen and (max-width: 750px) {
+    .pc { display: none !important; }
+    .sp { display: block !important; }
+}
+
+.mov {
+    color: white;
+    background-color: blue;
+    text-align: center;
+}
+
+.poster {
+    display: flex;
+    color: white;
+
+}
+
+.member {
+    margin-top: 10%;
+    color: white;
+    background-color: blue;
+    text-align: center;
+}
+
+.right {
+    color: white;
+}
+
+.title2 {
+    margin-top: 20%;
+    text-align: center;
+    background-color: blue;
+}
+
+.osusu {
+text-align: center;
+
+}
+
+.ityped {
+    color: white;
+    margin-left: 0%;
+    
+}
+
+.ityped-cursor {
+    font-size: 1.0rem;
+    opacity: 1;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+} 
+
+
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+@media only screen and (max-width: 750px) {
+    .image {
+        margin-left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    .flex {
+        display: block;
+    }
+    .teamicon {
+        display: block;
+    }
+    .zenhan {
+        display: block;
+    }
+    .kouhan {
+        display: block;
+    }
+    .poster {
+        width: 100%;
+    }
+    .osusu iframe {
+        width: 350px;
+        height: 350px;
+   }
+   .hulktext {
+     font-size: 86%;
+   }
+   .captaintext {
+    font-size: 75%;
+   }
+   .slick-list {
+    width: 200%;
+   }
+   
+}
+
+@media only screen and (max-width: 667px) {
+    .image img{
+        width: 350px;
+        height: auto;
+    }
+    .ironman {
+        width: 350px;
+        height: auto;
+    }
+    .cap {
+        width: 350px;
+        height: auto;
+    }
+    .thor {
+        width: 350px;
+        height: auto;
+    }
+    .hulk {
+        width: 350px;
+        height: auto;
+    }
+    .black {
+        width: 350px;
+        height: auto;
+    }
+    .hork {
+        width: 350px;
+        height: auto;
+    }
+    .youtube iframe {
+        width: 350px;
+        height: 350px;
+      }
+   .text1 {
+       font-size: 30%;
+   }
+   .osusu iframe {
+        width: 350px;
+        height: 350px;
+   }
+   .slick-list {
+    width: 100%;  
+   }
+
+}
+

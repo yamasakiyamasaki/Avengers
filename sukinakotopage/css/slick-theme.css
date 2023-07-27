@@ -1,0 +1,248 @@
+@charset "UTF-8";
+.title{
+  text-align: center;
+  margin-left: 10px;
+  font-size: 50px;
+  font-family: Impact;
+  height:70px;
+  color:#ffffff;
+  background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+}
+
+.flex {
+  display: flex;
+  color:#ffffff;
+}
+
+  
+.flex .text {
+  color:#ffffff;
+  font-size: 15px;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+
+.sunset{
+  position: absolute;
+  color:#ffffff;
+  top: 300px;
+  left: 550px;
+}
+
+.team{
+ 
+  font-size: 30px;
+  text-align: center;
+  height:70px;
+  color:#ffffff;
+  background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+}
+
+.teamicon {
+  display: flex;
+  font-size: 17px;
+  background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+    border: solid 3px #6091d3;
+    border-radius: 10px;
+}
+.teamicon .text{
+  line-height: 50px;
+  color: red;
+}
+
+.mov{
+  text-align: center;
+  height:70px;
+  color:#ffffff;
+  background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+}
+
+
+.poster{
+  color:#ffffff;
+  display:flex;
+ }
+.poster img {
+    margin: 3px 2px;
+    width: 100%;
+    height: 300px;
+} 
+
+.title2{
+  text-align: center;
+  margin-left: 10px;
+  font-size: 30px;
+  font-family: Impact;
+  height:50px;
+  color:#ffffff;
+  background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+}
+
+
+.member{
+  text-align: center;
+  color:#ffffff;
+  height:70px;
+  background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+}
+
+.ironman{
+  display: flex; 
+}
+
+.ironman img{
+  width: 100%;
+  height: 300px;
+}
+
+.cap{
+  display:flex;
+}
+.cap img{
+  margin-left: 60px;
+  width: 70%;
+  height: 300px;
+}
+
+.thor{
+  display: flex;
+}
+.thor img{
+  margin-top: 15px;
+  margin-right: 70px;
+   width: 500px;
+   height: 300px;
+}
+.hulk{
+  display: flex;
+}
+.hulk img{
+  margin-top: 15px;
+  margin-left: 30px;
+   width: 85%;
+   height: 300px;
+}
+.black{
+  display: flex;
+}
+.black img{
+  margin-left: 130px;
+  margin-top: 15px;
+   width: 150%;
+   height: 300px;
+}
+.hork{
+  display: flex;
+}
+.hork img{
+  margin-left: 200px;
+  margin-top: 15px;
+  width: 65%;
+  height: 300px;
+}
+.right{
+  color:#ffffff;
+  font-size: 30px;
+}
+.shousai {
+  color: #ffffff;
+}
+.zenhan {
+  display: flex;
+}
+.kouhan {
+  display: flex;
+  
+}
+.pc { display: block !important; }
+.sp { display: none !important; }
+
+@media screen and (max-width: 900px) {
+  .title {
+    text-align: center;
+    font-size: 30px;
+  }
+  .image {
+    margin-left: 0%;
+  }
+  .flex {
+    display: block; 
+  }
+  .teamicon {
+    display: block;
+  }
+  .memberpicture {
+    display: block;
+  }
+  .zenhan {
+    display: block;
+  }
+  .kouhan {
+    display: block;
+  }
+  .poster {
+    display: block;
+  }
+  .ironman{
+    margin-left: 0px;
+  }
+  .ironman img{
+    margin-left: 0px;
+    width: 430px;
+  }
+  .cap {
+    margin-left: 0px;
+  }
+  .cap img{
+    margin-left: 0px;
+    width: 400px;
+  }
+  .thor img{
+    margin-left: 0px;
+    width: 400px;
+     
+  }
+  .hulk img{
+    margin-left: 0px;
+     width: 50%;
+  }
+  .black img {
+    margin-left: 0px;
+    width: 50%;
+  }
+  .hork img{
+    margin-left: 0px;
+    width: 50%;
+    height: 300px;
+  }
+  .poster{
+    width: 300px;
+  }
+  .pc { display: block !important; }
+  .sp { display: none !important; }
+}
+
+
+
+@media only screen and (max-width: 750px) {
+  
+  .hulk img{
+    margin-left: 0px;
+     width: 400px;
+  }
+  .black img {
+    margin-left: 0px;
+    width: 400px;
+  }
+  .hork img{
+    margin-left: 0px;
+    width: 400px;
+  }
+  .title2 {
+    font-size: 15px;
+  }
+  .pc { display: none !important; }
+.sp { display: block !important; }
+
+}
