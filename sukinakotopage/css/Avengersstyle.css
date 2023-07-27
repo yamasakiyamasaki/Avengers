@@ -78,6 +78,9 @@
 }
 
 
+
+
+
 @media only screen and (max-width: 750px) {
     .pc { display: none !important; }
     .sp { display: block !important; }
@@ -129,6 +132,7 @@ text-align: center;
     animation: blink 0.3s infinite;
     animation-direction: alternate;
 } 
+
 
 
 @keyframes blink {
@@ -222,3 +226,6 @@ text-align: center;
 
 }
 
+.itirann {
+    color: white;
+}

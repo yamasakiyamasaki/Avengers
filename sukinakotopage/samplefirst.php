@@ -31,3 +31,23 @@ if ($conn->query($sql) === TRUE) {
 // データベースとの接続を閉じる
 $conn->close();
 ?>
+
+<!-- comment.js -->
+<script>
+  function getData() {
+    // APIエンドポイントのURLを指定
+    var apiUrl = 'http://localhost/sukinakotopage/sample.php'; 
+
+    // APIリクエストを送信
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        // データをテキストエリアに表示
+        var resultTextArea = document.getElementById('Result');
+        resultTextArea.value = JSON.stringify(data, null, 2);
+      })
+      .catch((error) => {
+        console.error('エラー:', error);
+      });
+}
+</script>
