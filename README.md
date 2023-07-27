@@ -16,4 +16,3 @@
 # js
 Javcascriptを入れています
 
-Ajaxを実装するにあたってJsが増え、samplefirst.php samplesecond.phpの内容も書き換わっています
