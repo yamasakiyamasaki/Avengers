@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
         <script src="./js/slick.min.js"></script>
+        
         <script>
           $(function() {
             $(".regular").slick({
@@ -27,6 +28,7 @@
        <script src="https://unpkg.com/ityped@1.0.3">
        </script>
        <script src="./js/sukinakotopage.js"></script>
+       <script src="./js/comment.js"></script>
       </head>
     <title>お問い合わせフォーム</title>
 
@@ -266,14 +268,50 @@
     
             <input type="submit" value="送信">
         </form>
-        <h1>みんなのコメント</h1>
-    <?php include 'samplesecond.php'; ?>
+        
+        
+    <!-- <?php include 'samplesecond.php'; ?> -->
+    
     </div>
     <br>
     <br>
     <br>
+    <h1 class="itirann">お問い合わせ一覧<button onclick="getData()">コメントを表示する！</button></h1>
+    <textarea id="Result" rows="10" cols="50"></textarea>
     
-
+    <script>
+        function getData() {
+            document.getElementById("Result").value = "問い合わせ中です…";
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "samplesecond.php");
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                try {
+                    if (xhr.readyState == 4) {
+                        if (xhr.status == 200) {
+                            var result = JSON.parse(xhr.response);
+                            if (result && result.comments && result.comments.length > 0) {
+                                var comments = result.comments;
+                                var displayText = "";
+                                for (var i = 0; i < comments.length; i++) {
+                                    displayText += "名前: " + comments[i].名前 + "\n";
+                                    displayText += "メッセージ: " + comments[i].メッセージ + "\n\n";
+                                }
+                                document.getElementById("Result").value = displayText;
+                            } else {
+                                document.getElementById("Result").value = "お問い合わせ情報がありません。";
+                            }
+                        } else {
+                            document.getElementById("Result").value = "サーバーからステータスコード " + xhr.status + " を受信しました。";
+                        }
+                    }
+                } catch (e) {
+                    document.getElementById("Result").value = "エラーが発生しました。" + e.message;
+                }
+            };
+        }
+    </script>
  </body>
 
  <footer class="container">

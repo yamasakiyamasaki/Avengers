@@ -1,3 +1,4 @@
+
 <?php
 // データベースに接続
 $servername = "127.0.0.1";
@@ -16,17 +17,18 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM お問い合わせ";
 $result = $conn->query($sql);
 
-// 結果の表示
+// 結果の格納
+$rows = array();
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo "名前: " . $row["名前"]. "<br>";
-        
-        echo "メッセージ: " . $row["メッセージ"]. "<br><br>";
+    while ($row = $result->fetch_assoc()) {
+        $rows[] = array("名前" => $row["名前"], "メッセージ" => $row["メッセージ"]);
     }
-} else {
-    echo "お問い合わせ情報がありません。";
 }
 
 // データベースとの接続を閉じる
 $conn->close();
+
+// JSON形式で出力
+header('Content-Type: application/json');
+echo json_encode(array("comments" => $rows));
 ?>
