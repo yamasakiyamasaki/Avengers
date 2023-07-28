@@ -1,4 +1,4 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <?php
 // データベースに接続
 $servername = "127.0.0.1";
