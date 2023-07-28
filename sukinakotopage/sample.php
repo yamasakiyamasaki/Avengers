@@ -279,7 +279,6 @@
     <h1 class="itirann">お問い合わせ一覧<button onclick="getData()">コメントを表示する！</button></h1>
     <textarea id="Result" rows="10" cols="50"></textarea>
     
-
     <script>
         function getData() {
             document.getElementById("Result").value = "問い合わせ中です…";
@@ -287,32 +286,32 @@
             xhr.open("POST", "samplesecond.php");
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
             xhr.send();
-            // ここでパラメータを指定する
-    var params = "param1=value1&param2=value2";
-    xhr.send(params);
             xhr.onreadystatechange = function () {
                 try {
                     if (xhr.readyState == 4) {
                         if (xhr.status == 200) {
                             var result = JSON.parse(xhr.response);
-                            var comments = result.comments;
-                            var displayText = "";
-                            for (var i = 0; i < comments.length; i++) {
-                                displayText += "名前: " + comments[i].名前 + "\n";
-                                displayText += "メッセージ: " + comments[i].メッセージ + "\n\n";
+                            if (result && result.comments && result.comments.length > 0) {
+                                var comments = result.comments;
+                                var displayText = "";
+                                for (var i = 0; i < comments.length; i++) {
+                                    displayText += "名前: " + comments[i].名前 + "\n";
+                                    displayText += "メッセージ: " + comments[i].メッセージ + "\n\n";
+                                }
+                                document.getElementById("Result").value = displayText;
+                            } else {
+                                document.getElementById("Result").value = "お問い合わせ情報がありません。";
                             }
-                            document.getElementById("Result").value = comments.length > 0 ? displayText : "お問い合わせ情報がありません。";
                         } else {
-                            document.getElementById("Result").value = "エラーが発生しました。";
+                            document.getElementById("Result").value = "サーバーからステータスコード " + xhr.status + " を受信しました。";
                         }
                     }
                 } catch (e) {
-                    document.getElementById("Result").value = "エラーが発生しました。";
+                    document.getElementById("Result").value = "エラーが発生しました。" + e.message;
                 }
             };
         }
-    </script> 
-
+    </script>
  </body>
 
  <footer class="container">
@@ -325,4 +324,4 @@
   </h1>
  </footer>
 
-</html>
+</html>as
